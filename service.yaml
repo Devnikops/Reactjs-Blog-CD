@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: reactjs-blog-service
+  labels:
+    app: reactjs-blog-app
+  spec:
+    selector:
+      app: reactjs-blog-app
+
+    ports:
+    - port: 3000
+      targetPort: 3000
+
+    type: LoadBalancer
