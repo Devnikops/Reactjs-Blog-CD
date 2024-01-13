@@ -1,0 +1,24 @@
+apiVersion: app/v1
+kind: Deployment
+metadata:
+  name: reactjs-blog-deploy
+spec:
+  replicas: 1
+  selector:
+    matchlabels:
+      app: reactjs-blog-app
+  template:
+    metadata:
+      labels:
+        app: reactjs-blog-app
+    spec:
+      containers:
+      - name: reactjs-blog-app
+        image: nikhil999999/reactjs-blog:1.0.0-15
+        resources:
+          limits:
+            cpu: "1"
+          requests:
+            cpu: "500m"
+        ports:
+        - containers: 3000
