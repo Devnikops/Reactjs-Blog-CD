@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        APP_NAME = "Reactjs-Blog"
+        APP_NAME = "reactjs-blog"
     }
 
     stages {
